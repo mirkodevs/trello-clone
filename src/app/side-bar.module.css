@@ -1,0 +1,50 @@
+.sideBar {
+  width: 300px;
+  left: 0;
+  color: black;
+
+  border-right: 2px solid #9ba4b5;
+  transition: width 0.5s ease;
+  box-sizing: content-box;
+}
+
+.sideBar h3 {
+  padding-left: 8px;
+  margin: 10px 0;
+}
+.sideBar li {
+  display: flex;
+  justify-content: start;
+  min-width: fit-content;
+  text-wrap: nowrap;
+}
+.sideBar li a {
+  padding: 8px;
+  border-radius: 8px;
+  text-align: left;
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+  width: 100%;
+}
+.sideBar li a:hover {
+  background-color: aliceblue;
+}
+@media screen and (max-width: 800px) {
+  .sideBar {
+    width: 300px;
+    left: 0;
+    color: black;
+    padding: 10px;
+    border-right: 2px solid #9ba4b5;
+  }
+  .sideBarMobile {
+  padding: 0;
+    width: 0;
+    border: none;
+  }
+.sideBarMobile ul,.sideBarMobile h3{
+  opacity: 0;
+}
+}
