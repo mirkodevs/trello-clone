@@ -40,7 +40,7 @@ const Modal = (props, ref) => {
         </svg>
       </Link>
           {isAddingProject && <NewProject />}
-          {isAddingTask && <NewTask/>}
+          {isAddingTask && <NewTask list={isAddingTask}/>}
           {currentTask && <TaskOverview task = {currentTask}/>}
         </div>
       </dialog>

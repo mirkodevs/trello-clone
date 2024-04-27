@@ -6,7 +6,8 @@ import { useContext, useEffect } from "react";
 import TaskContext from "../../../../context/currentTaskContext";
 import { months } from "../../../../lib/constant";
 
-export default function OneTask({ task }) {
+export default function OneTask({ task}) {
+
   const [{ isDragging }, drag] = useDrag(() => ({
     type: dragTypes.DONE,
     collect: (monitor) => ({
@@ -20,13 +21,10 @@ export default function OneTask({ task }) {
   }
   const dateArray = task.created_at.split(" ")[0].split("-");
 
-const displayDate = months[+dateArray[1] - 1] + " " +dateArray[2]
+  const displayDate = months[+dateArray[1] - 1] + " " + dateArray[2];
 
   return (
-    <div
-      onClick={handleSelectTask}
-      className={classes.oneTask}
-    >
+    <div onClick={handleSelectTask} className={classes.oneTask}>
       <div
         ref={drag}
         style={{

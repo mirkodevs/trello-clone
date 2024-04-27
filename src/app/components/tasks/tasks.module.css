@@ -7,14 +7,15 @@
   flex: 100%;
   max-height: 100%;
   position: relative;
+  margin-bottom: 10px;
 }
+
 .oneTask {
   display: flex;
   padding: 10px;
-  min-width: 250px;
   border-radius: 12px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
+  width: 100%;
   border: none;
 }
 
@@ -23,19 +24,19 @@
   width: 100%;
 }
 .h3 {
-  margin-inline:8px;
+  margin-inline: 8px;
   padding-bottom: 0.2em;
   padding-left: 2px;
 }
 .oneCol {
   height: fit-content;
   width: 25%;
-  min-width: fit-content;
+  min-width: 250px;
   padding: 10px;
   gap: 1.5em;
   display: flex;
   flex-direction: column;
-  max-height: 95%;
+  max-height: 90%;
   overflow: auto;
   padding-inline: 8px;
   padding-left: 2px;
@@ -49,10 +50,12 @@
   padding: 5px;
   cursor: pointer;
   gap: 0.3em;
+  border-radius: 12px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 /* width */
 .oneCol::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 /* Track */
@@ -64,4 +67,68 @@
 .oneCol::-webkit-scrollbar-thumb {
   background: #394867;
   border-radius: 12px;
+}
+.addList {
+  display: flex;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 100%;
+  border: none;
+  justify-content: center;
+  gap: 1em;
+  align-items: center;
+  cursor: pointer;
+}
+.oneTask input {
+  padding: 10px;
+  outline: none;
+  border-radius: 12px;
+  border: none;
+  background-color: #9ba4b5;
+  color: #f1f1f1;
+  width: 100%;
+}
+.buttonGroup {
+  background-color: transparent;
+  display: flex;
+  gap: 1em;
+}
+.buttonGroup button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.buttonGroup button:nth-child(1) {
+  background-color: #394867;
+  padding: 10px 15px;
+
+  color: #f1f1f1;
+}
+.buttonGroup button:nth-child(2) {
+  transition: all 0.5s ease;
+  padding: 6px;
+  color: #212a3e;
+}
+.buttonGroup button:nth-child(2):hover {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+/* width */
+.tasksWrapper::-webkit-scrollbar {
+height: 8px;
+position: relative;
+}
+
+/* Track */
+.tasksWrapper::-webkit-scrollbar-track {
+  background: transparent;
+  padding-bottom: 10px;
+}
+
+/* Handle */
+.tasksWrapper::-webkit-scrollbar-thumb {
+  background: #212a3e;
+  border-radius: 12px;
+  padding-bottom: 10px;
 }

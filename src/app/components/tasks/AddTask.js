@@ -1,9 +1,9 @@
 import classes from "./tasks.module.css";
 import Link from "next/link";
-export default function AddTask() {
+export default function AddTask({list}) {
   return (
     <Link 
-    href={"?add-task=true"} 
+    href={"?add-task=" + list.trim().replace(/\s/g, "-")} 
     className={classes.addTask}>
       <svg
         xmlns="http://www.w3.org/2000/svg"

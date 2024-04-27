@@ -1,6 +1,6 @@
 import classes from "./newProj.module.css";
 import { saveProject } from "../../../../lib/server";
-
+import OnSubmit from "../new-task/on-submit";
 export default function NewProject() {
   return (
     <form action={saveProject} className={classes.form}>
@@ -14,7 +14,7 @@ export default function NewProject() {
         <textarea name="desc" required></textarea>
       </fieldset>
 
-      <button>add</button>
+      <OnSubmit text="add project"/>
     </form>
   );
 }

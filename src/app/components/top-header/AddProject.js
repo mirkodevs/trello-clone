@@ -7,7 +7,7 @@ export default function AddProject({handleAdd}) {
     <Link href="?add-project=true">
     <button 
     onClick={handleAdd}
-    class={classes.button}>
+    className={classes.button}>
             <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
